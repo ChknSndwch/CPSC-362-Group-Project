@@ -59,8 +59,8 @@ public class NewBehaviourScript : MonoBehaviour
         else
             transform.localScale = new Vector3(1, 1, 1);
 
-        transform.position = Vector2.MoveTowards(transform.position,goalPoint.position,speed*Time.deltaTime);
-        if(Vector2.Distance(transform.position,goalPoint.position) < 1f)
+        transform.position = Vector2.MoveTowards(transform.position, goalPoint.position, speed * Time.deltaTime);
+        if (Vector2.Distance(transform.position, goalPoint.position) < 1f)
         {
             if (nextID == points.Count - 1)
                 idChangeValue = -1;
