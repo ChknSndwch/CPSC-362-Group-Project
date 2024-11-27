@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public float jump;
 
     public bool isJumping;
-    public int time; 
+    public int time;
     // Start is called before the first frame update
     void Start()
     {
