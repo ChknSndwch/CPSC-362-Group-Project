@@ -20,31 +20,31 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      Move = Input.GetAxis("Horizontal");
-      rb.velocity = new Vector2(speed * Move, rb.velocity.y);
-      if (Input.GetButtonDown("Jump") && (isJumping == false || time <= 2))
-      {
-        rb.AddForce(new Vector2(rb.velocity.x, jump));
-        Debug.Log("jump");
-        time++;
-      }
+        Move = Input.GetAxis("Horizontal");
+        rb.velocity = new Vector2(speed * Move, rb.velocity.y);
+        if (Input.GetButtonDown("Jump") && (isJumping == false || time <= 2))
+        {
+            rb.AddForce(new Vector2(rb.velocity.x, jump));
+            Debug.Log("jump");
+            time++;
+        }
     }
     
     private void OnCollisionEnter2D(Collision2D other)
     {
-      if (other.gameObject.CompareTag("Ground"))
-      {
-        isJumping = false;
-        time = 0;
-      }
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            isJumping = false;
+            time = 0;
+        }
     }
 
     private void OnCollisionExit2D(Collision2D other)
     {
-      if (other.gameObject.CompareTag("Ground"))
-      {
-        isJumping = true;
-        time++;
-      }
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            isJumping = true;
+            time++;
+        }
     }
 }
