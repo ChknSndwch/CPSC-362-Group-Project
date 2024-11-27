@@ -17,7 +17,7 @@ public class newPlayerMovement : MonoBehaviour
     {
         body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
 
-        if(Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
             body.velocity = new Vector2(body.velocity.x, speed);
         }
