@@ -22,14 +22,14 @@ public class PlayerMovement : MonoBehaviour
     {
         Move = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(speed * Move, rb.velocity.y);
+        
         if (Input.GetButtonDown("Jump") && (isJumping == false || time <= 2))
         {
             rb.AddForce(new Vector2(rb.velocity.x, jump));
             Debug.Log("jump");
             time++;
         }
-    }
-    
+    }    
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground"))
