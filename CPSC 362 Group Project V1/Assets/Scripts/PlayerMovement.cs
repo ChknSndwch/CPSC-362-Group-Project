@@ -28,8 +28,7 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("jump");
             time++;
         }
-        
-    }
+        }
     
     private void OnCollisionEnter2D(Collision2D other)
     {
