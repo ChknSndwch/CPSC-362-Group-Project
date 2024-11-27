@@ -164,12 +164,12 @@ GameObject:
   - component: {fileID: 217927754}
   - component: {fileID: 217927753}
   - component: {fileID: 217927752}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground4
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!61 &217927752
 BoxCollider2D:
@@ -276,12 +276,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 217927751}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.48, y: -2.76, z: 0}
-  m_LocalScale: {x: 1.6597654, y: 1.4999881, z: 3.1425}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.303516, y: 0.27286497, z: 0}
+  m_LocalScale: {x: 0.33854023, y: 0.08653156, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1030497732}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &243439060
 GameObject:
@@ -294,12 +294,12 @@ GameObject:
   - component: {fileID: 243439063}
   - component: {fileID: 243439062}
   - component: {fileID: 243439061}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground2
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!61 &243439061
 BoxCollider2D:
@@ -406,12 +406,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 243439060}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.5, y: -11.6012, z: 0}
-  m_LocalScale: {x: 13.49656, y: 8.736708, z: 3.1425}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.083783, y: -0.2371676, z: 0}
+  m_LocalScale: {x: 2.7528763, y: 0.5040046, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1030497732}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &367440422
 GameObject:
@@ -590,7 +590,7 @@ Transform:
   m_GameObject: {fileID: 436660158}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.64, y: -0.04, z: 0}
   m_LocalScale: {x: 0.62262434, y: 0.92929, z: 0.92929}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -645,7 +645,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.00000062584877, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -654,9 +654,9 @@ BoxCollider2D:
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_AutoTiling: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.5479836, y: 1}
   m_EdgeRadius: 0
 --- !u!95 &436660164
 Animator:
@@ -799,7 +799,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.4715123
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -824,7 +824,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 1.77, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -948,7 +948,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
@@ -1076,9 +1076,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6c6264fe22019d4f8c106fb7ae1f3fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
-  jump: 200
+  speed: 12
+  jump: 250
   isJumping: 0
+  time: 0
 --- !u!1 &742339791
 GameObject:
   m_ObjectHideFlags: 0
@@ -1377,12 +1378,12 @@ GameObject:
   - component: {fileID: 1030497732}
   - component: {fileID: 1030497731}
   - component: {fileID: 1030497730}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!61 &1030497730
 BoxCollider2D:
@@ -1493,7 +1494,14 @@ Transform:
   m_LocalPosition: {x: 7.3811, y: -7.49, z: 0}
   m_LocalScale: {x: 4.902712, y: 17.33458, z: 3.1425}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 243439063}
+  - {fileID: 1819189440}
+  - {fileID: 217927754}
+  - {fileID: 1791689635}
+  - {fileID: 1841557666}
+  - {fileID: 1168423658}
+  - {fileID: 2045268142}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1051902985
@@ -1576,12 +1584,12 @@ GameObject:
   - component: {fileID: 1168423657}
   - component: {fileID: 1168423656}
   - component: {fileID: 1168423659}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground7
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!61 &1168423656
 BoxCollider2D:
@@ -1688,12 +1696,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1168423655}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 58.079998, y: -12.74, z: 0}
-  m_LocalScale: {x: 9.278302, y: 7.292636, z: 3.1425}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.34099, y: -0.30286285, z: 0}
+  m_LocalScale: {x: 1.8924836, y: 0.42069876, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1030497732}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1168423659
 Rigidbody2D:
@@ -2434,7 +2442,7 @@ Transform:
   m_GameObject: {fileID: 1773514212}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 80.9, y: 7.6, z: 0}
+  m_LocalPosition: {x: 91, y: 6.9, z: 0}
   m_LocalScale: {x: 12.432493, y: 2.5093389, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2535,12 +2543,12 @@ GameObject:
   - component: {fileID: 1791689635}
   - component: {fileID: 1791689634}
   - component: {fileID: 1791689633}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground5
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!61 &1791689633
 BoxCollider2D:
@@ -2647,12 +2655,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1791689632}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.68, y: -0.58, z: 0}
-  m_LocalScale: {x: 1.6597654, y: 1.4999881, z: 3.1425}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.160185, y: 0.3986252, z: 0}
+  m_LocalScale: {x: 0.33854023, y: 0.08653156, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1030497732}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1819189437
 GameObject:
@@ -2665,12 +2673,12 @@ GameObject:
   - component: {fileID: 1819189440}
   - component: {fileID: 1819189439}
   - component: {fileID: 1819189438}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground3
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!61 &1819189438
 BoxCollider2D:
@@ -2777,12 +2785,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1819189437}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.23, y: -5.51, z: 0}
-  m_LocalScale: {x: 1.6597654, y: 1.4999881, z: 3.1425}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.0683985, y: 0.114222534, z: 0}
+  m_LocalScale: {x: 0.33854023, y: 0.08653156, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1030497732}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1841557663
 GameObject:
@@ -2795,12 +2803,12 @@ GameObject:
   - component: {fileID: 1841557666}
   - component: {fileID: 1841557665}
   - component: {fileID: 1841557664}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground6
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!61 &1841557664
 BoxCollider2D:
@@ -2907,12 +2915,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1841557663}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 41.71, y: -9.3131, z: 0}
-  m_LocalScale: {x: 9.278302, y: 13.688261, z: 3.1425}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.0020223, y: -0.10517129, z: 0}
+  m_LocalScale: {x: 1.8924836, y: 0.7896506, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1030497732}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1910894976
 GameObject:
@@ -2956,12 +2964,12 @@ GameObject:
   - component: {fileID: 2045268142}
   - component: {fileID: 2045268141}
   - component: {fileID: 2045268140}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground8
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!61 &2045268140
 BoxCollider2D:
@@ -3068,12 +3076,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2045268139}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.138, y: -8.0224, z: 0}
-  m_LocalScale: {x: 6.20366, y: 15.91812, z: 3.1425}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.1455677, y: -0.030713186, z: 0}
+  m_LocalScale: {x: 1.2653527, y: 0.9182871, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1030497732}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2114176222
 GameObject:
@@ -3170,13 +3178,6 @@ SceneRoots:
   - {fileID: 1773514215}
   - {fileID: 2114176224}
   - {fileID: 1030497732}
-  - {fileID: 243439063}
-  - {fileID: 1819189440}
-  - {fileID: 217927754}
-  - {fileID: 1791689635}
-  - {fileID: 1841557666}
-  - {fileID: 1168423658}
-  - {fileID: 2045268142}
   - {fileID: 1780588066}
   - {fileID: 1268686988}
   - {fileID: 367440423}
