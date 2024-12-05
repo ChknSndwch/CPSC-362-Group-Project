@@ -11,6 +11,7 @@ public class FinishLine : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            Debug.Log("Triggered Finishline"); // Add this line for debugging
             SceneManager.LoadScene("level2");
         }
     }
