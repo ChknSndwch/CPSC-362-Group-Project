@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Xml.Serialization;
 using UnityEngine;
 //Automatically adds BoxCollider2D component when adding script
-[RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(CircleCollider2D))]
 
 public class NewBehaviourScript : MonoBehaviour
 {
     //Waypoints
     public List<Transform> points;
-    //Value for next wawypoint
+    //Value for next waypoint
     public int nextID = 0;
     //The value of the current point
     int idChangeValue = 1;
@@ -23,7 +23,7 @@ public class NewBehaviourScript : MonoBehaviour
     void Init()
     {
         //Box collider trigger
-        GetComponent<BoxCollider2D>().isTrigger = true;
+        GetComponent<CircleCollider2D>().isTrigger = true;
 
         GameObject root = new GameObject(name + "_Root");
         //Reset Position
