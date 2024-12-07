@@ -1,0 +1,44 @@
+name: Lint and Fix Code Base
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  lint-and-fix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # Install .NET SDK (includes dotnet CLI)
+      - name: Install .NET SDK
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '9.0' # Specify the version compatible with your project
+
+      # Install dotnet-format globally
+      - name: Install dotnet-format
+        run: dotnet tool install -g dotnet-format
+
+      # Add dotnet tools to PATH
+      - name: Add dotnet tools to PATH
+        run: echo "::add-path::${HOME}/.dotnet/tools"
+
+      # Run dotnet format to fix C# issues
+      - name: Run Auto-Fixers
+        run: dotnet format --folder --include "*.cs"
+
+      # Commit and push changes if fixes were applied
+      - name: Commit and Push Fixes
+        run: |
+          git config --local user.name "GitHub Actions"
+          git config --local user.email "actions@github.com"
+          git add .
+          git commit -m "Auto-fix formatting issues"
+          git push origin ${{ github.ref }}
+        continue-on-error: true
