@@ -1,0 +1,8 @@
+Make sure doxygen folder fully saved on desktop.
+
+To run doxygen and see the website, first Doxygen folder has to be saved to desktop, this can happen by cloning respiratory via wsl git ...
+
+After saving doxygen folder, go to the doxygen folder, go to the other doxygen folder, 
+go to html, find a file with the name index and double click. 
+
+It will link you to the doxygen doc web including project code and documentation. 
