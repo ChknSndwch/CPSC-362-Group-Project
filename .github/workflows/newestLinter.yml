@@ -15,30 +15,25 @@ jobs:
         with:
           fetch-depth: 0
 
-      # Install .NET SDK (includes dotnet CLI)
-      - name: Install .NET SDK
+      - name: Setup .NET SDK
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '9.0' # Specify the version compatible with your project
+          dotnet-version: '7.x' # Specify the .NET SDK version compatible with your project
 
-      # Install dotnet-format globally
-      - name: Install dotnet-format
+      - name: Install dotnet-format tool
         run: dotnet tool install -g dotnet-format
 
-      # Add dotnet tools to PATH using environment files
       - name: Add dotnet tools to PATH
         run: echo "${HOME}/.dotnet/tools" >> $GITHUB_PATH
 
-      # Run dotnet format to fix C# issues
-      - name: Run Auto-Fixers
-        run: dotnet format --folder --include "*.cs"
+      - name: Run dotnet format
+        run: dotnet format "CPSC 362 Group Project V1"
 
-      # Commit and push changes if fixes were applied
-      - name: Commit and Push Fixes
+      - name: Commit and Push Changes
         run: |
           git config --local user.name "GitHub Actions"
           git config --local user.email "actions@github.com"
           git add .
-          git commit -m "Auto-fix formatting issues"
+          git commit -m "Auto-format code using dotnet format"
           git push origin ${{ github.ref }}
         continue-on-error: true
