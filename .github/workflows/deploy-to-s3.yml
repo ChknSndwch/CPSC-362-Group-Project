@@ -1,0 +1,37 @@
+name: Upload README to S3
+
+on:
+  workflow_dispatch:  # Allows you to trigger the workflow manually
+  push:
+    branches:
+      - main  # Trigger on push to the main branch
+
+jobs:
+  upload-readme:
+    runs-on: ubuntu-latest  # Use the latest Ubuntu environment for running this job
+
+    steps:
+    - name: Checkout the repository code
+      uses: actions/checkout@v3  # Checkout the code from the repository
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v3
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
+
+    - name: Upload README to S3
+      run: |
+        # Define the path to your specific README file in the CPSC-362-Group-Project folder
+        README_PATH="CPSC-362-Group-Project/README.md"
+        
+        # Append a project description to make a unique name for the file
+        PROJECT_DESCRIPTION="Group Project"
+        UNIQUE_NAME="README-${PROJECT_DESCRIPTION// /-}.md"
+        
+        # Optionally copy the README to a uniquely named file (if needed)
+        cp $README_PATH $UNIQUE_NAME
+        
+        # Upload the README to the S3 bucket
+        aws s3 cp $UNIQUE_NAME s3://csuf-cpsc-362/
