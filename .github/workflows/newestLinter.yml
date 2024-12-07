@@ -20,12 +20,6 @@ jobs:
         with:
           dotnet-version: '9.0' # Specify the .NET SDK version compatible with your project
 
-      - name: Install dotnet-format tool
-        run: dotnet tool install -g dotnet-format
-
-      - name: Add dotnet tools to PATH
-        run: echo "${HOME}/.dotnet/tools" >> $GITHUB_PATH
-
       - name: Run dotnet format
         run: dotnet format "CPSC 362 Group Project V1"
 
@@ -37,3 +31,4 @@ jobs:
           git commit -m "Auto-format code using dotnet format"
           git push origin ${{ github.ref }}
         continue-on-error: true
+
