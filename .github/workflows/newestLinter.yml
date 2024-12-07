@@ -1,27 +1,45 @@
-name: Lint and Fix Code Base
+---
+name: Lint code base and update
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+on: [push, pull_request]
 
 jobs:
-  lint-and-fix:
-    runs-on: ubuntu-latest
+  build:
+    name: Build Unity and Lint
+    runs-on: windows-latest
     steps:
-      - name: Checkout code
+    
+      # Checkout Code
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          lfs: true
 
-      - name: Setup .NET SDK
+      # Cache (Not Working (Probably works on Ubuntu))
+      #- uses: actions/cache@v3
+      #  with:
+      #    path: "CPSC 362 Group Project V1"
+      #    key: Library-MyProjectName-TargetPlatform
+      #    restore-keys: |
+      #      Library-MyProjectName-
+      #      Library-
+          
+      # Install .NET SDK for Analyzers
+      - name: Install .NET SDK
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '9.0' # Specify the .NET SDK version compatible with your project
+          dotnet-version: 6.0
+          
+      # Run Lint
+      - name: Run Code Analysis
+        run: |
+          dotnet build "CPSC 362 Group Project V1/CPSC 362 Group Project V1.sln" --no-restore /p:RunAnalyzers=true
 
-      - name: Run dotnet format
-        run: dotnet format "CPSC 362 Group Project V1"
+      # Output
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Build
+          path: build
 
       - name: Commit and Push Changes
         run: |
