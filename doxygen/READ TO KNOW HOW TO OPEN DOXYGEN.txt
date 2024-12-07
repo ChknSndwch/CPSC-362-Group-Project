@@ -1,0 +1,1 @@
+go to Doyxgen folder, then html, then open the index file. Folders have to be saved so that doxygen can run
