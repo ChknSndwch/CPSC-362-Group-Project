@@ -24,7 +24,7 @@ jobs:
     - name: Upload README to S3
       run: |
         # Define the path to your specific README file in the CPSC-362-Group-Project folder
-        README_PATH="CPSC-362-Group-Project/README.md"
+        README_PATH="README.md"
         
         # Append a project description to make a unique name for the file
         PROJECT_DESCRIPTION="Group Project"
