@@ -10,7 +10,7 @@ public class PointKeeper : MonoBehaviour
 {
     public static PointKeeper instance;
     public Text totalPoints;
-    private int points = 0;
+    public int points = 0;
 
     private void Awake()
     {
@@ -70,6 +70,11 @@ public class PointKeeper : MonoBehaviour
     {
         totalPoints.text = "Points: " + points;
         Debug.Log("You should have a Total Score: " + points);
+    }
+
+    public int GetScore()
+    {
+        return points;
     }
 
     // Update is called once per frame

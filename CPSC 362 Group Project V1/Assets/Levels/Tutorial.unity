@@ -2318,7 +2318,7 @@ GameObject:
   - component: {fileID: 852240641}
   - component: {fileID: 852240640}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: PointText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2340,7 +2340,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -967, y: 642.12}
+  m_AnchoredPosition: {x: -379, y: 185}
   m_SizeDelta: {x: 444.091, y: 155.7527}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &852240640
