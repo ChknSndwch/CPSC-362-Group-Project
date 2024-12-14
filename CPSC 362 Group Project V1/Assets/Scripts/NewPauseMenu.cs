@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; // Only needed if you want to quit or load another scene.
+using UnityEngine.SceneManagement;
 
 public class NewPauseMenu : MonoBehaviour
 {
