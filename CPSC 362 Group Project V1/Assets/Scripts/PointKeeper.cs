@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEditor.TerrainTools;
 
 public class PointKeeper : MonoBehaviour
 {
