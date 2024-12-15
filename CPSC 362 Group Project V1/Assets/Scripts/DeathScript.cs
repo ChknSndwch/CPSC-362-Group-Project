@@ -9,7 +9,6 @@ public class DeathScript : MonoBehaviour
 
     private Rigidbody2D rb;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = Player.GetComponent<Rigidbody2D>(); // Get the Rigidbody2D component of the player
@@ -19,6 +18,9 @@ public class DeathScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            // Play death sound using SoundManager
+            SoundManager.instance.PlayDeathSound();
+
             // Reset player position to the starting point
             Player.transform.position = startPoint.transform.position;
 

@@ -10,6 +10,9 @@ public class ProjectileBehavior : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            // Play death sound using SoundManager
+            SoundManager.instance.PlayDeathSound();
+            
             Debug.Log("Triggered Death");
             Player.transform.position = startPoint.transform.position;
         }

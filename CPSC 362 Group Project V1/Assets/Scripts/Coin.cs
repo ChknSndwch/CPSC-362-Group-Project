@@ -27,6 +27,9 @@ public class Coin : MonoBehaviour
             // Add points to the score
             PointKeeper.instance.AddPoints(coinValue);
 
+            // Play the coin sound using the SoundManager
+            SoundManager.instance.PlayCoinSound();
+
             // Destroy the coin
             Destroy(gameObject);
         }
