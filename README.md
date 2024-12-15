@@ -22,6 +22,7 @@
 - A playable character with smooth movement mechanics, including jumping and running.
 - Interactive environments with platforms, obstacles, and collectibles.
 - Enemy AI with patrol movements and interactions
+- A pause menu with options to resume or quit the game
 - Dynamic level design with progression-based levels of increasing complexity.
 - Background music and sound effects for an immersive experience.
 - Scoring system to track progress and encourage replayability.
