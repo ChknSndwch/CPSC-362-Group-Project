@@ -31,6 +31,25 @@
 
 ## Installation Instructions
 
+### For Players:
+
+**Download Link:** https://drive.usercontent.google.com/download?id=13_w4eYZlrfbmc39i9Otx4XKcr4aOd1m6&export=download
+
+1. Download the game using the link above
+2. Unzip the .ZIP folder to a directory of your choice
+3. Open the ShapeEscapeV1.0 folder
+4. Run the Shape Escape.exe to start the game
+
+Controls:
+- Movement(Left/Right) - A/D or ArrowKeys (<-/->)
+- Jump                 - Spacebar
+- Double Jump          - 2x Spacebar
+- Pause                - ESC
+
+To Quit Game:
+1. Click on the quit button on the start/end screen
+2. While paused, click the quit button
+
 ### For Developers:
 1. **Clone the Repository**:
    ```bash
